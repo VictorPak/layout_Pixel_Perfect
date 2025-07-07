@@ -79,7 +79,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items:center;
-}
+} /* посмотреть как делать другими способами бургер*/
 .burger_line {
   display: block;
   width: 21px;
@@ -89,7 +89,7 @@ body {
 }
 .burger_line:last-child {
   margin-bottom: 0;
-}
+}/* я не заметил последний отступ надо еще раз посмотреть ошибку*/
 .h1 {
   max-width: 734px;
   font-weight: 500;
@@ -99,7 +99,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color:var(--white-color);
-}
+}/* для взятие кодов нужен плагин inspect в фигме*/
 .h4 {
   max-width: 734px;
   margin: 0 auto;  
