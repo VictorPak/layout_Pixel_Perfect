@@ -4,6 +4,10 @@ html {
 *, *::before, *::after{
   box-sizing:inherit;
 }
+h1, h2, h3, h4, h5, h6 p {
+  padding: 0;
+  margin: 0;
+}
 body {
   margin: 0;
   font-family: 'Oswald', sans-serif ;
@@ -14,7 +18,6 @@ body {
   /* background-color: #ccc; */
   margin: 0 auto;
 }
-
 :root {
   --accent-color:#F7654A;
   --dark-color:#404149;
@@ -22,7 +25,6 @@ body {
   --white-color:#fff;
   --background-color:#E5E5E5;
 }
-
 .text-h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: 500;
@@ -55,7 +57,6 @@ body {
   background-image: url(../img/First_screen_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 .header__title {
   padding-top: 20px;
@@ -110,4 +111,64 @@ body {
   text-align: center;
   color: var(--white-color);
 }
-
+/*Блок About*/
+.about {
+  min-height: 1080px;
+  position: relative;
+}
+.info {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 1110px;
+  width: 100%;
+  min-height: 300px;
+  background-color: #f7f7f7;
+  padding: 57px 130px;
+}
+.conteiner {
+}
+.about__grid {
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+.about__grid-item {
+  text-align: center;
+  width: 190px;
+}
+.about__h4 {
+  font-size: 72px;
+  color: var(--accent-color);
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+.about__h5 {
+  color: #000;
+  font-weight: 500;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+.about__p {
+  margin: 0;
+  color:var(--grey-color);
+  font-weight: 500;
+  font-size: 18px;
+}
+/*Медиазапросы*/
+@media screen and (max-width: 1280px){
+  .info {
+  position: relative;
+  }
+  .about__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+}
+@media screen and (max-width: 768px){
+  .about__grid {
+    grid-template-columns: repeat(1, 1fr);
+}
+}
