@@ -1,56 +1,67 @@
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after{
-  box-sizing:inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
-h1, h2, h3, h4, h5, h6 p {
+img {
+  display: block;
+  max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 p {
   padding: 0;
   margin: 0;
 }
 body {
   margin: 0;
-  font-family: 'Oswald', sans-serif ;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
-.container{
+.container {
   max-width: 1110px;
   /* background-color: #ccc; */
   margin: 0 auto;
 }
 :root {
-  --accent-color:#F7654A;
-  --dark-color:#404149;
-  --grey-color:#999;
-  --white-color:#fff;
-  --background-color:#E5E5E5;
+  --accent-color: #f7654a;
+  --dark-color: #404149;
+  --grey-color: #999;
+  --white-color: #fff;
+  --background-color: #e5e5e5;
 }
 .text-h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
   font-size: 36px;
   text-transform: uppercase;
 }
 .text-h3 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
 }
 .text-h4 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 21px;
 }
 .text-p {
-  font-family: 'Open-sans', sans-serif;
+  font-family: "Open-sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 .text-p-reviews {
-  font-family: 'Open-sans', sans-serif;
+  font-family: "Open-sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 21px ;
+  line-height: 21px;
 }
 .header {
   min-height: 740px;
@@ -65,7 +76,7 @@ body {
   align-items: flex-end;
   margin-bottom: 112px;
 }
-.header__logo{
+.header__logo {
   width: 60px;
   height: 60px;
 }
@@ -74,23 +85,23 @@ body {
   height: 50px;
   cursor: pointer;
   padding: 0;
-  background-color:var(--accent-color);
+  background-color: var(--accent-color);
   border: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 } /* посмотреть как делать другими способами бургер*/
 .burger_line {
   display: block;
   width: 21px;
   height: 3px;
-  background-color:#fff;
+  background-color: #fff;
   margin-bottom: 4px;
 }
 .burger_line:last-child {
   margin-bottom: 0;
-}/* я не заметил последний отступ надо еще раз посмотреть ошибку*/
+} /* я не заметил последний отступ надо еще раз посмотреть ошибку*/
 .h1 {
   max-width: 734px;
   font-weight: 500;
@@ -99,12 +110,12 @@ body {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  color:var(--white-color);
-}/* для взятие кодов нужен плагин inspect в фигме*/
+  color: var(--white-color);
+} /* для взятие кодов нужен плагин inspect в фигме*/
 .h4 {
   max-width: 734px;
-  margin: 0 auto;  
-  font-family: 'Oswald', sans-serif ;
+  margin: 0 auto;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-transform: uppercase;
@@ -115,6 +126,7 @@ body {
 .about {
   min-height: 1080px;
   position: relative;
+  padding-top: 250px;
 }
 .info {
   position: absolute;
@@ -130,7 +142,7 @@ body {
 .conteiner {
 }
 .about__grid {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   justify-items: center;
@@ -153,22 +165,88 @@ body {
 }
 .about__p {
   margin: 0;
-  color:var(--grey-color);
+  color: var(--grey-color);
   font-weight: 500;
   font-size: 18px;
 }
 /*Медиазапросы*/
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1280px) {
   .info {
-  position: relative;
+    position: relative;
   }
   .about__grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
 }
-}
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .about__grid {
     grid-template-columns: repeat(1, 1fr);
+  }
 }
+
+/*Продолжение блока About*/
+
+.project-h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--dark-color);
+  margin-bottom: 50px;
+}
+.about__flex {
+  display: flex;
+}
+.abour__flex-item {
+  max-width: 350px;
+  margin-right: 30px;
+}
+.abour__flex-item:last-child {
+  margin-right: 0;
+}
+.project-img {
+  width: 350px;
+  height: 380px;
+  margin-bottom: 45px;
+}
+.rectangle {
+  width: 55px;
+  height: 6px;
+  background-color: var(--accent-color);
+  margin-bottom: 15px;
+}
+.project-h3 {
+  font-weight: 500;
+  color: var(--dark-color);
+  
+}
+.project-p {
+  color: var(--grey-color);
+  margin: 13px 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+/*Медиазапросы*/
+@media screen and (max-width: 1280px) {
+  .info {
+   padding: 450px 15px 110px 15px ;
+  }
+  .about {
+    padding-top: 150px;
+    padding-bottom: 80px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .about__flex {
+  flex-direction: column;
+  align-items:center; 
+  }
+  .abour__flex-item {
+  margin-right: 0;
+  margin-bottom: 30px;
+  }
+  .abour__flex-item:last-child {
+    margin-bottom: 0;
+  }
 }
